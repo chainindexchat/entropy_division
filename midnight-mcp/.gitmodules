@@ -1,0 +1,36 @@
+[submodule "reference/servers"]
+	path = reference/mcp/examples/servers
+	url = https://github.com/modelcontextprotocol/servers
+[submodule "reference/servers-archived"]
+	path = reference/mcp/examples/servers-archived
+	url = https://github.com/modelcontextprotocol/servers-archived
+[submodule "reference/modelcontextprotocol"]
+	path = reference/mcp/modelcontextprotocol
+	url = https://github.com/modelcontextprotocol/modelcontextprotocol
+[submodule "reference/typescript-sdk"]
+	path = reference/mcp/typescript-sdk
+	url = https://github.com/modelcontextprotocol/typescript-sdk
+[submodule "reference/midnight/midnight-docs"]
+	path = reference/midnight/midnight-docs
+	url = https://github.com/midnightntwrk/midnight-docs
+[submodule "reference/midnight/midnight-node-docker"]
+	path = reference/midnight/midnight-node-docker
+	url = https://github.com/midnightntwrk/midnight-node-docker
+[submodule "reference/midnight/midnight-indexer"]
+	path = reference/midnight/midnight-indexer
+	url = https://github.com/midnightntwrk/midnight-indexer
+[submodule "reference/midnight/midnight-node"]
+	path = reference/midnight/midnight-node
+	url = https://github.com/midnightntwrk/midnight-node
+[submodule "reference/midnight/example-counter"]
+	path = reference/midnight/examples/example-bboard
+	url = https://github.com/midnightntwrk/example-bboard
+[submodule "reference/midnight/example-counter1"]
+	path = reference/midnight/examples/example-counter
+	url = https://github.com/midnightntwrk/example-counter
+[submodule "reference/midnight/compact"]
+	path = reference/midnight/compact
+	url = https://github.com/midnightntwrk/compact
+[submodule "reference/midnight/midnight-ledger"]
+	path = reference/midnight/midnight-ledger
+	url = https://github.com/midnightntwrk/midnight-ledger

@@ -1,0 +1,63 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "verbatimModuleSyntax": true,
+    "strict": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": false,
+    "noEmit": true,
+    "skipLibCheck": true,
+    "types": ["bun-types"],
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "plugins": [
+      {
+        "name": "@effect/language-service",
+        "refactors": true,
+        "diagnostics": true,
+        "diagnosticSeverity": {
+          "floatingEffect": "warning"
+        },
+        "diagnosticsName": true,
+        "missingDiagnosticNextLine": "warning",
+        "reportSuggestionsAsWarningsInTsc": false,
+        "quickinfo": true,
+        "quickinfoEffectParameters": "whenTruncated",
+        "quickinfoMaximumLength": -1,
+        "completions": true,
+        "goto": true,
+        "inlays": true,
+        "allowedDuplicatedPackages": [],
+        "barrelImportPackages": [],
+        "namespaceImportPackages": [],
+        "topLevelNamedReexports": "ignore",
+        "importAliases": { "Array": "Arr" },
+        "noExternal": false,
+        "keyPatterns": [
+          {
+            "target": "service",
+            "pattern": "default",
+            "skipLeadingPath": ["src/"]
+          }
+        ],
+        "layerGraphFollowDepth": 0
+      }
+    ]
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "reference"]
+}

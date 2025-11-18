@@ -1,0 +1,31 @@
+{
+  "name": "midnight-mcp",
+  "module": "./src/index.ts",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/lodash": "latest"
+  },
+  "scripts": {
+    "dev": "bun ./src"
+  },
+  "peerDependencies": {
+    "typescript": "latest"
+  },
+  "dependencies": {
+    "@effect/ai": "latest",
+    "@effect/cli": "latest",
+    "@effect/cluster": "latest",
+    "@effect/platform": "latest",
+    "@effect/platform-bun": "latest",
+    "@midnight-ntwrk/midnight-js-level-private-state-provider": "latest",
+    "@midnight-ntwrk/midnight-js-node-zk-config-provider": "latest",
+    "effect": "latest",
+    "graffle": "^8.0.0-next.219",
+    "lodash": "latest"
+  },
+  "trustedDependencies": [
+    "@parcel/watcher"
+  ]
+}
