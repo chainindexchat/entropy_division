@@ -1,0 +1,8 @@
+{
+  "name": "midnight-mcp-remote",
+  "config": {
+    "url": "http://localhost:3100/sse"
+  },
+  "visibility": "private",
+  "description": "Midnight blockchain MCP server (HTTP/SSE mode) connected to hosted testnet-02 - querying blocks, transactions, contracts, and DUST generation status"
+}

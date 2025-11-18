@@ -1,0 +1,157 @@
+/* Midnight UI Standalone Styles - Complete scoped styles for Payload CMS */
+/* All styles are scoped to [data-midnight-ui] to prevent affecting Payload admin */
+
+[data-midnight-ui] {
+  /* CSS Variables mapped from Payload theme */
+  --background: var(--theme-bg, #09090b);
+  --foreground: var(--theme-text, #fafafa);
+  --card: var(--theme-elevation-50, #18181b);
+  --card-foreground: var(--theme-text, #fafafa);
+  --primary: var(--theme-elevation-500, #3f3f46);
+  --primary-foreground: var(--theme-text, #fafafa);
+  --muted: var(--theme-elevation-100, #27272a);
+  --muted-foreground: var(--theme-elevation-500, #a1a1aa);
+  --border: var(--theme-elevation-200, #27272a);
+  --radius: 0.5rem;
+  
+  color: var(--foreground);
+  
+  /* Tailwind utility classes - manually defined and scoped */
+  .min-h-screen { min-height: 100vh; }
+  .bg-background { background-color: hsl(var(--background)); }
+  .text-foreground { color: hsl(var(--foreground)); }
+  .text-muted-foreground { color: hsl(var(--muted-foreground)); }
+  .bg-card { background-color: hsl(var(--card)); }
+  .border { border-width: 1px; }
+  .border-border { border-color: hsl(var(--border)); }
+  .rounded-md { border-radius: calc(var(--radius) - 2px); }
+  .rounded { border-radius: var(--radius); }
+  .rounded-full { border-radius: 9999px; }
+  .p-2 { padding: 0.5rem; }
+  .p-3 { padding: 0.75rem; }
+  .p-4 { padding: 1rem; }
+  .px-3 { padding-left: 0.75rem; padding-right: 0.75rem; }
+  .px-4 { padding-left: 1rem; padding-right: 1rem; }
+  .px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
+  .py-1 { padding-top: 0.25rem; padding-bottom: 0.25rem; }
+  .py-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+  .mb-2 { margin-bottom: 0.5rem; }
+  .mt-2 { margin-top: 0.5rem; }
+  .mt-4 { margin-top: 1rem; }
+  .mt-12 { margin-top: 3rem; }
+  .ml-1 { margin-left: 0.25rem; }
+  .flex { display: flex; }
+  .inline-flex { display: inline-flex; }
+  .hidden { display: none; }
+  .flex-col { flex-direction: column; }
+  .items-center { align-items: center; }
+  .justify-center { justify-content: center; }
+  .justify-between { justify-content: space-between; }
+  .gap-1\.5 { gap: 0.375rem; }
+  .gap-2 { gap: 0.5rem; }
+  .gap-3 { gap: 0.75rem; }
+  .gap-4 { gap: 1rem; }
+  .space-x-3 > * + * { margin-left: 0.75rem; }
+  .space-y-2 > * + * { margin-top: 0.5rem; }
+  .space-y-4 > * + * { margin-top: 1rem; }
+  .space-y-6 > * + * { margin-top: 1.5rem; }
+  .text-xs { font-size: 0.75rem; line-height: 1rem; }
+  .text-sm { font-size: 0.875rem; line-height: 1.25rem; }
+  .text-base { font-size: 1rem; line-height: 1.5rem; }
+  .text-lg { font-size: 1.125rem; line-height: 1.75rem; }
+  .text-2xl { font-size: 1.5rem; line-height: 2rem; }
+  .text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
+  .text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
+  .font-medium { font-weight: 500; }
+  .font-semibold { font-weight: 600; }
+  .font-bold { font-weight: 700; }
+  .text-center { text-align: center; }
+  .break-all { word-break: break-all; }
+  .w-2 { width: 0.5rem; }
+  .w-4 { width: 1rem; }
+  .w-5 { width: 1.25rem; }
+  .w-8 { width: 2rem; }
+  .w-9 { width: 2.25rem; }
+  .w-12 { width: 3rem; }
+  .w-fit { width: fit-content; }
+  .w-full { width: 100%; }
+  .h-2 { height: 0.5rem; }
+  .h-4 { height: 1rem; }
+  .h-5 { height: 1.25rem; }
+  .h-8 { height: 2rem; }
+  .h-9 { height: 2.25rem; }
+  .h-10 { height: 2.5rem; }
+  .max-w-4xl { max-width: 56rem; }
+  .max-h-40 { max-height: 10rem; }
+  .mx-auto { margin-left: auto; margin-right: auto; }
+  .block { display: block; }
+  .opacity-60 { opacity: 0.6; }
+  .opacity-80 { opacity: 0.8; }
+  .opacity-90 { opacity: 0.9; }
+  .transition-all { transition-property: all; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 150ms; }
+  .transition-opacity { transition-property: opacity; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 150ms; }
+  .cursor-pointer { cursor: pointer; }
+  .cursor-not-allowed { cursor: not-allowed; }
+  .overflow-auto { overflow: auto; }
+  .whitespace-pre-wrap { white-space: pre-wrap; }
+  .flex-1 { flex: 1 1 0%; }
+  .flex-shrink-0 { flex-shrink: 0; }
+  .animate-pulse { animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+  .animate-spin { animation: spin 1s linear infinite; }
+  .outline-none { outline: 2px solid transparent; outline-offset: 2px; }
+  
+  /* Responsive utilities */
+  @media (min-width: 640px) {
+    .sm\:text-sm { font-size: 0.875rem; line-height: 1.25rem; }
+    .sm\:text-base { font-size: 1rem; line-height: 1.5rem; }
+    .sm\:text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
+    .sm\:inline { display: inline; }
+    .sm\:hidden { display: none; }
+    .sm\:block { display: block; }
+    .sm\:flex-row { flex-direction: row; }
+    .sm\:items-center { align-items: center; }
+    .sm\:justify-between { justify-content: space-between; }
+    .sm\:w-auto { width: auto; }
+    .sm\:p-6 { padding: 1.5rem; }
+    .sm\:ml-1 { margin-left: 0.25rem; }
+    .sm\:break-normal { word-break: normal; }
+  }
+  
+  @media (min-width: 1024px) {
+    .lg\:text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
+    .lg\:p-8 { padding: 2rem; }
+    .lg\:space-y-8 > * + * { margin-top: 2rem; }
+  }
+  
+  /* Keyframes */
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+  }
+  
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  
+  /* Color utilities */
+  .text-emerald-400 { color: rgb(52 211 153); }
+  .text-emerald-500 { color: rgb(16 185 129); }
+  .text-red-600 { color: rgb(220 38 38); }
+  .text-red-700 { color: rgb(185 28 28); }
+  .bg-emerald-500\/10 { background-color: rgb(16 185 129 / 0.1); }
+  .border-emerald-500\/20 { border-color: rgb(16 185 129 / 0.2); }
+  .bg-red-50 { background-color: rgb(254 242 242); }
+  .border-red-200 { border-color: rgb(254 202 202); }
+  .bg-blue-50 { background-color: rgb(239 246 255); }
+  .border-blue-200 { border-color: rgb(191 219 254); }
+  .text-blue-800 { color: rgb(30 64 175); }
+  .bg-green-50 { background-color: rgb(240 253 244); }
+  .border-green-200 { border-color: rgb(187 247 208); }
+  .text-green-800 { color: rgb(22 101 52); }
+  .text-orange-600 { color: rgb(234 88 12); }
+  .text-yellow-600 { color: rgb(202 138 4); }
+  .bg-gray-100 { background-color: rgb(243 244 246); }
+  .bg-gray-50 { background-color: rgb(249 250 251); }
+  .bg-muted { background-color: hsl(var(--muted)); }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "midnight-mcp-nix",
+  "config": {
+    "command": "/nix/var/nix/profiles/default/bin/nix",
+    "args": [
+      "develop",
+      "--no-pure-eval",
+      "/Users/dixieflatline/Documents/Repositories/midnight-mcp",
+      "--command",
+      "bun",
+      "run",
+      "src/index.ts"
+    ],
+    "env": {
+      "MIDNIGHT_GRAPHQL_ENDPOINT": "http://localhost:8080/graphql"
+    }
+  },
+  "visibility": "private",
+  "description": "Midnight blockchain MCP server (Nix development environment) for querying blocks, transactions, contracts, and DUST generation status"
+}

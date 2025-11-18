@@ -1,0 +1,184 @@
+/* Midnight UI Component Styles */
+/* These styles are scoped to [data-midnight-ui] to avoid affecting other parts of the application */
+/* Now uses CSS variables that adapt to light/dark theme */
+
+[data-midnight-ui] {
+  /* Base container - adapts to theme */
+  padding: 1.5rem;
+  background: hsl(var(--background));
+  border-radius: 0.5rem;
+  border: 1px solid hsl(var(--border));
+  color: hsl(var(--foreground));
+}
+
+/* Ensure text inherits theme colors */
+[data-midnight-ui] * {
+  color: inherit;
+}
+
+/* Container backgrounds - use theme variables */
+[data-midnight-ui] .bg-gray-50,
+[data-midnight-ui] .bg-gray-100,
+[data-midnight-ui] .bg-white {
+  background-color: hsl(var(--card)) !important;
+  color: hsl(var(--card-foreground)) !important;
+}
+
+/* Headings - use theme foreground */
+[data-midnight-ui] h1,
+[data-midnight-ui] h2,
+[data-midnight-ui] h3,
+[data-midnight-ui] h4,
+[data-midnight-ui] h5,
+[data-midnight-ui] h6 {
+  color: hsl(var(--foreground)) !important;
+  font-weight: 600 !important;
+}
+
+/* Paragraphs */
+[data-midnight-ui] p {
+  color: hsl(var(--muted-foreground)) !important;
+}
+
+/* Card components */
+[data-midnight-ui] [class*="card"] {
+  background-color: hsl(var(--card)) !important;
+  border: 1px solid hsl(var(--border)) !important;
+  color: hsl(var(--card-foreground)) !important;
+}
+
+/* All buttons must be visible and properly styled */
+[data-midnight-ui] button {
+  opacity: 1 !important;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-weight: 500 !important;
+  border-radius: 0.375rem;
+  padding: 0.5rem 1rem !important;
+  min-height: 2.5rem;
+  font-size: 0.875rem !important;
+  cursor: pointer !important;
+}
+
+/* Primary buttons - use theme primary */
+[data-midnight-ui] button:not([class*="outline"]):not([class*="ghost"]):not([class*="link"]):not([class*="secondary"]):not([class*="destructive"]) {
+  background-color: hsl(var(--primary)) !important;
+  color: hsl(var(--primary-foreground)) !important;
+  border: 1px solid hsl(var(--primary)) !important;
+}
+
+[data-midnight-ui] button:not([class*="outline"]):not([class*="ghost"]):not([class*="link"]):not([class*="secondary"]):not([class*="destructive"]):hover:not([disabled]) {
+  opacity: 0.9 !important;
+}
+
+/* Outline buttons - visible border */
+[data-midnight-ui] button[class*="outline"] {
+  background-color: transparent !important;
+  color: hsl(var(--foreground)) !important;
+  border: 1px solid hsl(var(--border)) !important;
+}
+
+[data-midnight-ui] button[class*="outline"]:hover:not([disabled]) {
+  background-color: hsl(var(--accent)) !important;
+  color: hsl(var(--accent-foreground)) !important;
+}
+
+/* Ghost buttons */
+[data-midnight-ui] button[class*="ghost"] {
+  background-color: transparent !important;
+  color: hsl(var(--foreground)) !important;
+  border: none !important;
+}
+
+[data-midnight-ui] button[class*="ghost"]:hover:not([disabled]) {
+  background-color: hsl(var(--accent)) !important;
+  color: hsl(var(--accent-foreground)) !important;
+}
+
+/* Disabled buttons */
+[data-midnight-ui] button[disabled] {
+  opacity: 0.5 !important;
+  cursor: not-allowed !important;
+}
+
+/* Input fields - use theme variables */
+[data-midnight-ui] input,
+[data-midnight-ui] textarea {
+  background-color: hsl(var(--background)) !important;
+  border: 1px solid hsl(var(--border)) !important;
+  color: hsl(var(--foreground)) !important;
+  border-radius: 0.375rem;
+  padding: 0.5rem 0.75rem !important;
+  font-size: 0.875rem !important;
+}
+
+[data-midnight-ui] input::placeholder,
+[data-midnight-ui] textarea::placeholder {
+  color: hsl(var(--muted-foreground)) !important;
+}
+
+[data-midnight-ui] input:focus,
+[data-midnight-ui] textarea:focus {
+  border-color: hsl(var(--ring)) !important;
+  outline: none !important;
+  box-shadow: 0 0 0 3px hsl(var(--ring) / 0.2) !important;
+}
+
+/* Labels - visible in theme */
+[data-midnight-ui] label {
+  color: hsl(var(--foreground)) !important;
+  font-weight: 500 !important;
+  font-size: 0.875rem !important;
+  display: block !important;
+  margin-bottom: 0.375rem !important;
+}
+
+/* Badges */
+[data-midnight-ui] [class*="badge"] {
+  opacity: 1 !important;
+  display: inline-flex !important;
+  padding: 0.25rem 0.625rem !important;
+  border-radius: 9999px !important;
+  font-size: 0.75rem !important;
+  font-weight: 500 !important;
+}
+
+/* Icons - always visible */
+[data-midnight-ui] svg {
+  opacity: 1 !important;
+  flex-shrink: 0;
+}
+
+/* Success styles */
+[data-midnight-ui] .text-emerald-400,
+[data-midnight-ui] .text-emerald-500 {
+  color: hsl(142 76% 36%) !important;
+}
+
+.dark [data-midnight-ui] .text-emerald-400,
+.dark [data-midnight-ui] .text-emerald-500 {
+  color: hsl(142 71% 45%) !important;
+}
+
+[data-midnight-ui] .bg-emerald-500\/10 {
+  background-color: hsl(142 76% 36% / 0.1) !important;
+}
+
+[data-midnight-ui] .border-emerald-500\/20 {
+  border-color: hsl(142 76% 36% / 0.2) !important;
+}
+
+/* Error styles */
+[data-midnight-ui] .bg-red-50 {
+  background-color: hsl(var(--destructive) / 0.1) !important;
+}
+
+[data-midnight-ui] .border-red-200 {
+  border-color: hsl(var(--destructive) / 0.3) !important;
+}
+
+[data-midnight-ui] .text-red-600 {
+  color: hsl(var(--destructive)) !important;
+}

@@ -1,0 +1,8 @@
+/* Import shadcn base styles and theme variables - this includes all Tailwind directives */
+@import "../../shadcn/src/styles/globals.css";
+
+/* Import tw-animate-css for animations */
+@import "tw-animate-css";
+
+/* Import midnight-ui component styles (scoped to [data-midnight-ui]) */
+@import "./midnight-ui.css";

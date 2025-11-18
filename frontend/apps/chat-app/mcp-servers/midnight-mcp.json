@@ -1,0 +1,17 @@
+{
+  "name": "midnight-mcp",
+  "config": {
+    "command": "docker",
+    "args": [
+      "run",
+      "-i",
+      "--rm",
+      "-e",
+      "MIDNIGHT_GRAPHQL_ENDPOINT=http://host.docker.internal:8080/graphql",
+      "midnight-mcp:latest"
+    ],
+    "env": {}
+  },
+  "visibility": "private",
+  "description": "Midnight blockchain MCP server for querying blocks, transactions, contracts, and DUST generation status"
+}

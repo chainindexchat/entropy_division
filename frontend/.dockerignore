@@ -1,0 +1,59 @@
+# Dependencies - Don't copy node_modules, let Docker install fresh
+node_modules
+**/node_modules
+.pnpm-store
+
+# Build outputs
+.next
+dist
+build
+out
+.turbo
+
+# Development files
+.git
+.gitignore
+*.md
+!README.md
+!CI-BUILD.md
+.env
+.env*
+.vscode
+.idea
+
+# Test files
+**/*.test.ts
+**/*.test.tsx
+**/*.spec.ts
+**/*.spec.tsx
+coverage
+.nyc_output
+
+# CI/CD
+.github
+.gitlab-ci.yml
+.circleci
+
+# Documentation
+docs
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+tmp
+temp
+*.tmp
+*.swp
+*.swo
+*~
