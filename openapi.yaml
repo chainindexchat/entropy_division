@@ -1,0 +1,82 @@
+openapi: 3.1.0
+info:
+  title: ORACLE Protocol API
+  version: 1.1.0
+  description: >
+    API surface for assessment, market, and license operations in the ORACLE
+    risk-adjusted compute protocol.
+paths:
+  /v1/assessment/manifest:
+    post:
+      summary: Submit a ComputeManifest for assessment
+      operationId: submitManifest
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ComputeManifest'
+      responses:
+        '202':
+          description: Assessment accepted
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AssessmentAccepted'
+  /v1/assessment/{id}:
+    get:
+      summary: Get assessment status and result
+      operationId: getAssessment
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Assessment result
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AssessmentResult'
+components:
+  schemas:
+    ComputeManifest:
+      type: object
+      description: Conceptual sketch of the workload manifest. See README for semantics.
+      properties:
+        workloadId:
+          type: string
+        model:
+          type: object
+        computeRequirements:
+          type: object
+        dataAccess:
+          type: object
+        runtimeEnvironment:
+          type: object
+        declaredRisk:
+          type: object
+        disclosurePolicy:
+          type: object
+    AssessmentAccepted:
+      type: object
+      properties:
+        id:
+          type: string
+        status:
+          type: string
+          enum: [pending, running]
+    AssessmentResult:
+      type: object
+      properties:
+        id:
+          type: string
+        status:
+          type: string
+          enum: [pending, running, complete, failed]
+        riskScore:
+          type: number
+        riskLevel:
+          type: string
